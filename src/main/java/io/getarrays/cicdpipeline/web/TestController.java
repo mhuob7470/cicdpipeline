@@ -16,11 +16,17 @@ import java.util.Map;
  */
 
 @RestController
-@RequestMapping(path = "/test")
+//@RequestMapping(path = "/test")
 public class TestController {
 
+
     @GetMapping
+    public ResponseEntity<Map<String, String>> healthcheck() {
+        return ResponseEntity.ok().body(Map.of("Status", "Up"));
+    }
+
+    @GetMapping("/test")
     public ResponseEntity<Map<String, String>> test() {
-        return ResponseEntity.ok().body(Map.of("Testing", "Up and running"));
+        return ResponseEntity.ok().body(Map.of("Testing", "Test Data"));
     }
 }
