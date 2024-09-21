@@ -33,4 +33,8 @@ public class TestController {
     public ResponseEntity<Map<String, String>> abdu() {
         return ResponseEntity.ok().body(Map.of("next deployment", "suceessfull"));
     }
+    @GetMapping("/love")
+    public ResponseEntity<Map<String, String>> love() {
+        return ResponseEntity.ok().body(Map.of("is it deploy", "yes new"));
+    }
 }
