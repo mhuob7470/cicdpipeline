@@ -29,4 +29,8 @@ public class TestController {
     public ResponseEntity<Map<String, String>> test() {
         return ResponseEntity.ok().body(Map.of("Testing", "Test Data"));
     }
+    @GetMapping("/abdu")
+    public ResponseEntity<Map<String, String>> abdu() {
+        return ResponseEntity.ok().body(Map.of("next deployment", "suceessfull"));
+    }
 }
